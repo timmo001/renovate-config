@@ -8,6 +8,9 @@
   ],
   "dependencyDashboard": true,
   "labels": ["dependencies"],
+  "git-submodules": {
+    "enabled": true
+  },
   "lockFileMaintenance": {
     "enabled": true
   },
