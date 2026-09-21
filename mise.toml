@@ -1,6 +1,6 @@
 [tools]
 node = "24.21.0"
-"npm:renovate" = "44.103.0"
+"npm:renovate" = "44.103.7"
 
 [tasks.check]
 description = "Validate the shared Renovate preset"
