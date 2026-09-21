@@ -135,6 +135,11 @@
       "groupName": "github actions"
     },
     {
+      "description": "Group container images",
+      "groupName": "container images",
+      "matchManagers": ["dockerfile", "docker-compose"]
+    },
+    {
       "description": "Use the shorter release delay for fast-moving development dependencies.",
       "matchDepNames": [
         "effect",
