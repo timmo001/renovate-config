@@ -25,7 +25,8 @@ Keep repository-specific pins, custom managers and groups in the consumer config
 - Coordinated Effect, OpenCode 1, OpenCode 2, OpenTUI, Lit and Oxlint groups.
   Effect compiler tooling stays outside the runtime group. Browser Control has
   its own release cycle and stays outside the OpenCode groups.
-- The first-party Oxlint rules package updates independently, without a release delay.
+- The first-party Oxlint rules package updates independently, without a release
+  delay.
 - Recommended presets, a dependency dashboard, the `dependencies` label, and
   grouped GitHub Actions pinned to commit digests.
 
@@ -38,4 +39,5 @@ Renovate owns release-age policy. pnpm consumers should set
 
 ## Validation
 
-Run `mise run check` to validate the preset with the pinned Renovate version.
+Run `mise run check` with Docker available. It validates the preset using the
+pinned official Renovate image.

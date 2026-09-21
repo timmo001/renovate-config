@@ -1,7 +1,7 @@
-[tools]
-node = "24.21.0"
-"npm:renovate" = "44.103.0"
-
 [tasks.check]
 description = "Validate the shared Renovate preset"
-run = "renovate-config-validator --strict --no-global default.json"
+run = '''
+docker run --rm --volume "$PWD:/work:ro" --workdir /work \
+  ghcr.io/renovatebot/renovate:44.103.0 \
+  renovate-config-validator --strict --no-global default.json
+'''
