@@ -8,6 +8,9 @@
   ],
   "dependencyDashboard": true,
   "labels": ["dependencies"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "minimumReleaseAge": "1 day",
   "packageRules": [
     {
