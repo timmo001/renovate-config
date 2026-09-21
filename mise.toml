@@ -1,0 +1,7 @@
+[tools]
+node = "24.21.0"
+"npm:renovate" = "44.103.0"
+
+[tasks.check]
+description = "Validate the shared Renovate preset"
+run = "renovate-config-validator --strict --no-global default.json"

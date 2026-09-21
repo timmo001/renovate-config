@@ -1,0 +1,110 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests",
+    "group:monorepos",
+    "group:recommended"
+  ],
+  "dependencyDashboard": true,
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "1 day",
+  "packageRules": [
+    {
+      "description": "Update the Effect runtime and integrations together.",
+      "matchPackageNames": [
+        "effect",
+        "@effect/**",
+        "!@effect/tsgo",
+        "!@effect/language-service"
+      ],
+      "groupName": "Effect",
+      "groupSlug": "effect"
+    },
+    {
+      "description": "Keep coordinated OpenCode 1 packages together.",
+      "matchDepNames": [
+        "opencode-ai",
+        "npm:opencode-ai",
+        "@opencode-ai/**",
+        "npm:@opencode-ai/**",
+        "!@opencode-ai/browser-control",
+        "!npm:@opencode-ai/browser-control"
+      ],
+      "groupName": "OpenCode 1",
+      "groupSlug": "opencode-1"
+    },
+    {
+      "description": "Keep coordinated OpenCode 2 packages together.",
+      "matchDepNames": [
+        "@opencode/**",
+        "npm:@opencode/**",
+        "anomalyco/opencode",
+        "github:anomalyco/opencode"
+      ],
+      "groupName": "OpenCode 2",
+      "groupSlug": "opencode-2"
+    },
+    {
+      "description": "Update OpenTUI packages together.",
+      "matchPackageNames": ["@opentui/**"],
+      "groupName": "OpenTUI",
+      "groupSlug": "opentui"
+    },
+    {
+      "description": "Update Lit monorepo packages together.",
+      "matchSourceUrls": ["https://github.com/lit/lit"],
+      "groupName": "Lit",
+      "groupSlug": "lit"
+    },
+    {
+      "description": "Update Oxlint packages together.",
+      "matchPackageNames": [
+        "oxlint",
+        "@oxlint/**",
+        "oxlint-tsgolint",
+        "eslint-plugin-oxlint"
+      ],
+      "groupName": "oxlint",
+      "groupSlug": "oxlint"
+    },
+    {
+      "description": "Group GitHub Actions.",
+      "matchManagers": ["github-actions"],
+      "groupName": "github actions"
+    },
+    {
+      "description": "Use the shorter release delay for fast-moving development dependencies.",
+      "matchDepNames": [
+        "effect",
+        "@effect/**",
+        "@opencode/**",
+        "npm:@opencode/**",
+        "@opencode-ai/**",
+        "npm:@opencode-ai/**",
+        "opencode-ai",
+        "npm:opencode-ai",
+        "anomalyco/opencode",
+        "github:anomalyco/opencode",
+        "aqua:earendil-works/pi",
+        "aqua:herdrdev/herdr",
+        "github:backnotprop/plannotator"
+      ],
+      "minimumReleaseAge": "2 hours"
+    },
+    {
+      "description": "Update first-party dependencies without a release delay.",
+      "matchPackageNames": [
+        "@timmo001/**",
+        "timmo001/**",
+        "https://github.com/timmo001/**"
+      ],
+      "minimumReleaseAge": null
+    },
+    {
+      "description": "Update Git submodules without a release delay.",
+      "matchManagers": ["git-submodules"],
+      "minimumReleaseAge": null
+    }
+  ]
+}
