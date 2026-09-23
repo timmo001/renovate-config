@@ -56,19 +56,6 @@
       "groupSlug": "effect"
     },
     {
-      "description": "Keep coordinated OpenCode 1 packages together.",
-      "matchDepNames": [
-        "opencode-ai",
-        "npm:opencode-ai",
-        "@opencode-ai/**",
-        "npm:@opencode-ai/**",
-        "!@opencode-ai/browser-control",
-        "!npm:@opencode-ai/browser-control"
-      ],
-      "groupName": "OpenCode 1",
-      "groupSlug": "opencode-1"
-    },
-    {
       "description": "Keep coordinated OpenCode 2 packages together.",
       "matchDepNames": [
         "@opencode/**",
@@ -119,10 +106,8 @@
         "@effect/**",
         "@opencode/**",
         "npm:@opencode/**",
-        "@opencode-ai/**",
-        "npm:@opencode-ai/**",
-        "opencode-ai",
-        "npm:opencode-ai",
+        "@opencode-ai/browser-control",
+        "npm:@opencode-ai/browser-control",
         "anomalyco/opencode",
         "github:anomalyco/opencode",
         "aqua:earendil-works/pi",

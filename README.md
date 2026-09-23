@@ -22,9 +22,9 @@ Keep repository-specific pins, custom managers and groups in the consumer config
 - Two hours for Effect packages, including compiler tooling, plus OpenCode, Pi,
   Herdr and Plannotator.
 - No release delay for first-party dependencies or Git submodules.
-- Coordinated Effect, OpenCode 1, OpenCode 2, OpenTUI, Lit and Oxlint groups.
+- Coordinated Effect, OpenCode 2, OpenTUI, Lit and Oxlint groups.
   Effect compiler tooling stays outside the runtime group. Browser Control has
-  its own release cycle and stays outside the OpenCode groups.
+  its own release cycle and stays outside the OpenCode 2 group.
 - The first-party Oxlint rules package updates independently, without a release
   delay.
 - Recommended presets, a dependency dashboard, the `dependencies` label, and
