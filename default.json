@@ -126,6 +126,12 @@
       "minimumReleaseAge": null
     },
     {
+      "description": "Treat every timmo001/workflows CalVer release as a standard update.",
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["timmo001/workflows"],
+      "versioning": "regex:^(?<patch>\\d{8})\\.(?<build>\\d+)$"
+    },
+    {
       "description": "Update Git submodules without a release delay.",
       "matchManagers": ["git-submodules"],
       "minimumReleaseAge": null
