@@ -27,6 +27,8 @@ Keep repository-specific pins, custom managers and groups in the consumer config
   its own release cycle and stays outside the OpenCode 2 group.
 - The first-party Oxlint rules package updates independently, without a release
   delay.
+- Exact mise Python pins only move to versions with a precompiled Linux x86_64
+  build, so mise installs without compiling from source.
 - Recommended presets, a dependency dashboard, the `dependencies` label, and
   grouped GitHub Actions pinned to commit digests.
 

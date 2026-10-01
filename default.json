@@ -18,7 +18,30 @@
     "enabled": true
   },
   "minimumReleaseAge": "1 day",
+  "customDatasources": {
+    "python-precompiled": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/astral-sh/uv/main/crates/uv-python/download-metadata.json",
+      "transformTemplates": [
+        "($builds := $.*[name = \"cpython\" and os = \"linux\" and arch.family = \"x86_64\" and arch.variant = null and libc = \"gnu\" and variant = null and prerelease = \"\"]; $first := $builds{$string(major) & \".\" & $string(minor) & \".\" & $string(patch): $min($number(build))}; {\"releases\": [$each($first, function($b, $v) {($d := $string($b); $t := $substring($d, 0, 4) & \"-\" & $substring($d, 4, 2) & \"-\" & $substring($d, 6, 2) & \"T00:00:00Z\"; {\"version\": $v, \"date\": $t, \"releaseTimestamp\": $t})})], \"sourceUrl\": \"https://github.com/astral-sh/python-build-standalone\"})"
+      ]
+    }
+  },
   "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update exact mise Python pins only to versions with a precompiled Linux build.",
+      "managerFilePatterns": [
+        "/(^|/)\\.?mise(\\.[^/]+)?\\.toml$/",
+        "/(^|/)\\.?mise/config(\\.[^/]+)?\\.toml$/",
+        "/(^|/)\\.config/mise/config\\.toml$/"
+      ],
+      "matchStrings": [
+        "(?:^|\\n)python\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+      ],
+      "depNameTemplate": "python",
+      "datasourceTemplate": "custom.python-precompiled",
+      "versioningTemplate": "semver"
+    },
     {
       "customType": "jsonata",
       "fileFormat": "yaml",
@@ -44,6 +67,13 @@
     }
   ],
   "packageRules": [
+    {
+      "description": "Update exact mise Python pins through the precompiled build list instead of CPython tags.",
+      "matchManagers": ["mise"],
+      "matchDepNames": ["python"],
+      "matchCurrentValue": "/^\\d+\\.\\d+\\.\\d+$/",
+      "enabled": false
+    },
     {
       "description": "Update the Effect runtime and integrations together.",
       "matchPackageNames": [
