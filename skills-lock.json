@@ -15,6 +15,13 @@
       "skillPath": "code-review/SKILL.md",
       "computedHash": "bc6af04ecee3f4a40dcacc77a8c6cd3046f3982159b9469eae49f30bb14d02cd"
     },
+    "skill-prefixes": {
+      "source": "timmo001/skills",
+      "ref": "c7497d43ccf72ee0ca447b63fd7a4e9f687fb008",
+      "sourceType": "github",
+      "skillPath": "skill-prefixes/SKILL.md",
+      "computedHash": "8c4203c19621bc61824eb955e9584dbebc47774de8bad7b02653fb59c1e419c4"
+    },
     "writing-style": {
       "source": "timmo001/skills",
       "ref": "459e2cdb4bed95c81e97767afa1804ef07858c03",
