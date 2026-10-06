@@ -156,6 +156,12 @@
       "minimumReleaseAge": null
     },
     {
+      "description": "Follow effect-herdr fork releases (X.Y.Z-timmo001.N) across upstream versions, and skip any plain upstream version.",
+      "matchPackageNames": ["@timmo001/effect-herdr"],
+      "allowedVersions": "/-timmo001\\.\\d+$/",
+      "ignoreUnstable": false
+    },
+    {
       "description": "Treat every timmo001/workflows CalVer release as a standard update.",
       "matchManagers": ["github-actions"],
       "matchDepNames": ["timmo001/workflows"],
