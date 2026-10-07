@@ -22,6 +22,13 @@
       "skillPath": "skill-prefixes/SKILL.md",
       "computedHash": "8c4203c19621bc61824eb955e9584dbebc47774de8bad7b02653fb59c1e419c4"
     },
+    "task-runners": {
+      "source": "timmo001/skills",
+      "ref": "b7812455a43a2df7023e7f2615726be96312f338",
+      "sourceType": "github",
+      "skillPath": "task-runners/SKILL.md",
+      "computedHash": "7441acdfc4682beb6889856331104b0d3eb2c532a295ef35d7ab1df5db8bea4c"
+    },
     "writing-style": {
       "source": "timmo001/skills",
       "ref": "acfb03257d922f31734a83b6352a50840b84ae86",
