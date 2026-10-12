@@ -169,6 +169,25 @@
       "description": "Update Git submodules without a release delay.",
       "matchManagers": ["git-submodules"],
       "minimumReleaseAge": null
+    },
+    {
+      "description": "Move vendored Home Assistant frontend submodules between beta and stable release tags only.",
+      "matchManagers": ["git-submodules"],
+      "matchPackageNames": [
+        "https://github.com/home-assistant/frontend",
+        "https://github.com/home-assistant/frontend.git"
+      ],
+      "versioning": "regex:^(?<major>\\d{8})\\.(?<patch>\\d+)$"
+    },
+    {
+      "description": "Skip branch-tracking digest updates for Home Assistant frontend submodules, so they never move to development commits.",
+      "matchManagers": ["git-submodules"],
+      "matchPackageNames": [
+        "https://github.com/home-assistant/frontend",
+        "https://github.com/home-assistant/frontend.git"
+      ],
+      "matchUpdateTypes": ["digest"],
+      "enabled": false
     }
   ]
 }

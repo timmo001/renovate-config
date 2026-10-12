@@ -29,6 +29,10 @@ Keep repository-specific pins, custom managers and groups in the consumer config
   delay.
 - Exact mise Python pins only move to versions with a precompiled Linux x86_64
   build, so mise installs without compiling from source.
+- Vendored Home Assistant frontend submodules only move between release tags,
+  beta and stable, never development commits. Set the submodule's `branch` in
+  `.gitmodules` to its current tag (for example `branch = 20260930.3`) and check
+  out that tag. Submodules that still track a branch get no updates.
 - Recommended presets, a dependency dashboard, the `dependencies` label, and
   grouped GitHub Actions pinned to commit digests.
 
