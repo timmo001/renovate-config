@@ -27,6 +27,9 @@ Keep repository-specific pins, custom managers and groups in the consumer config
   its own release cycle and stays outside the OpenCode 2 group.
 - The first-party Oxlint rules package updates independently, without a release
   delay.
+- OpenCode `references` in `opencode.json` that pin a release tag as their
+  `branch` (for example `v2.0.28`) move to newer tags. References that follow
+  a branch are left alone.
 - Exact mise Python pins only move to versions with a precompiled Linux x86_64
   build, so mise installs without compiling from source.
 - Vendored Home Assistant frontend submodules only move between release tags,

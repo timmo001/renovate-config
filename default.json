@@ -57,6 +57,17 @@
       ]
     },
     {
+      "customType": "jsonata",
+      "fileFormat": "json",
+      "description": "Update OpenCode references pinned to a release tag. References that follow a branch are left alone.",
+      "managerFilePatterns": ["/(^|/)opencode\\.json$/"],
+      "matchStrings": [
+        "$.references.*[$exists(repository) and $type(branch) = 'string' and $contains(branch, /^v?\\d+\\.\\d+\\.\\d+$/)].{'depName': repository, 'currentValue': branch}"
+      ],
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver"
+    },
+    {
       "customType": "regex",
       "description": "Update annotated container image input defaults in reusable workflows.",
       "managerFilePatterns": ["/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"],
