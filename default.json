@@ -156,11 +156,21 @@
       "minimumReleaseAge": "2 hours"
     },
     {
-      "description": "Update first-party dependencies without a release delay.",
+      "description": "Update first-party dependencies, including Home Assistant, Music Assistant and Open Home Foundation projects, without a release delay.",
       "matchPackageNames": [
         "@timmo001/**",
         "timmo001/**",
-        "https://github.com/timmo001/**"
+        "https://github.com/timmo001/**",
+        "home-assistant/**",
+        "https://github.com/home-assistant/**",
+        "music-assistant/**",
+        "https://github.com/music-assistant/**",
+        "esphome/**",
+        "https://github.com/esphome/**",
+        "OHF-Voice/**",
+        "https://github.com/OHF-Voice/**",
+        "OpenHomeFoundation/**",
+        "https://github.com/OpenHomeFoundation/**"
       ],
       "minimumReleaseAge": null
     },

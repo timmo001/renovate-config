@@ -21,7 +21,9 @@ Keep repository-specific pins, custom managers and groups in the consumer config
 - One-day release delay by default.
 - Two hours for Effect packages, including compiler tooling, plus OpenCode, Pi,
   Herdr and Plannotator.
-- No release delay for first-party dependencies or Git submodules.
+- No release delay for first-party dependencies or Git submodules. Home
+  Assistant, Music Assistant, ESPHome and Open Home Foundation projects count
+  as first party.
 - Coordinated Effect, OpenCode 2, OpenTUI, Lit and Oxlint groups.
   Effect compiler tooling stays outside the runtime group. Browser Control has
   its own release cycle and stays outside the OpenCode 2 group.
