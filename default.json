@@ -69,6 +69,34 @@
     },
     {
       "customType": "regex",
+      "description": "Update the shared hk base that hk.pkl amends from a timmo001/workflows release. The tag appears in both the path and the package version.",
+      "managerFilePatterns": ["/(^|/)(\\.config/)?hk\\.pkl$/"],
+      "matchStrings": [
+        "package://github\\.com/timmo001/workflows/releases/download/(?<currentValue>\\d{8}\\.\\d+)/hk-base@\\d{8}\\.\\d+\\.0#"
+      ],
+      "depNameTemplate": "timmo001/workflows",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "regex:^(?<patch>\\d{8})\\.(?<build>\\d+)$",
+      "autoReplaceStringTemplate": "package://github.com/timmo001/workflows/releases/download/{{{newValue}}}/hk-base@{{{newValue}}}.0#"
+    },
+    {
+      "customType": "regex",
+      "description": "Update the hk schema and builtins that hk configs import. The version appears in both the release tag and the package version.",
+      "managerFilePatterns": [
+        "/(^|/)(\\.config/)?hk\\.pkl$/",
+        "/(^|/)hk/[^/]+\\.pkl$/"
+      ],
+      "matchStrings": [
+        "package://github\\.com/jdx/hk/releases/download/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/hk@\\d+\\.\\d+\\.\\d+#"
+      ],
+      "depNameTemplate": "jdx/hk",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.+)$",
+      "versioningTemplate": "semver",
+      "autoReplaceStringTemplate": "package://github.com/jdx/hk/releases/download/v{{{newValue}}}/hk@{{{newValue}}}#"
+    },
+    {
+      "customType": "regex",
       "description": "Update annotated container image input defaults in reusable workflows.",
       "managerFilePatterns": ["/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"],
       "matchStrings": [
