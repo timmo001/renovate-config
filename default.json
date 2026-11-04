@@ -181,7 +181,7 @@
         "aqua:herdrdev/herdr",
         "github:backnotprop/plannotator"
       ],
-      "minimumReleaseAge": "2 hours"
+      "minimumReleaseAge": "1 hour"
     },
     {
       "description": "Update first-party dependencies, including Home Assistant, Music Assistant and Open Home Foundation projects, without a release delay.",
