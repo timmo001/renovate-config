@@ -107,6 +107,12 @@
   ],
   "packageRules": [
     {
+      "description": "Keep library peer dependencies as ranges, widening them for new majors instead of pinning.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
       "description": "Update exact mise Python pins through the precompiled build list instead of CPython tags.",
       "matchManagers": ["mise"],
       "matchDepNames": ["python"],
