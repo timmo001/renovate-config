@@ -142,6 +142,12 @@
       "groupSlug": "opencode-2"
     },
     {
+      "description": "Leave Effect in OpenCode plugin packages alone: the OpenCode packages pin it exactly, so it moves with them when their update is applied, not on its own.",
+      "matchFileNames": ["**/opencode/package.json"],
+      "matchPackageNames": ["effect", "@effect/**"],
+      "enabled": false
+    },
+    {
       "description": "Update OpenTUI packages together.",
       "matchPackageNames": ["@opentui/**"],
       "groupName": "OpenTUI",
