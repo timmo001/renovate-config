@@ -1,0 +1,22 @@
+// Pre-push checks: the shared Markdown, YAML, Actions and shell lints from
+// timmo001/workflows, run check-only. Synced skills under .agents/skills are
+// another repository's files, so their Markdown isn't linted here.
+// Run the checks by hand with `hk check`.
+amends "package://github.com/timmo001/workflows/releases/download/20261114.0/hk-base@20261114.0.0#/base.pkl"
+
+hooks {
+  ["pre-push"] {
+    steps {
+      ["markdownlint"] {
+        exclude = List(".agents/skills/**")
+      }
+    }
+  }
+  ["check"] {
+    steps {
+      ["markdownlint"] {
+        exclude = List(".agents/skills/**")
+      }
+    }
+  }
+}
