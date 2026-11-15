@@ -1,7 +1,13 @@
+[tools]
+node = "24"
+
+[tools."npm:renovate"]
+version = "44.239.1"
+# re2 downloads its native build, which Renovate uses to validate regexes
+allow_builds = ["re2"]
+# @yarnpkg/libzip 3.2.2 was published by arcanis from yarnpkg/berry without provenance
+trust_policy_excludes = ["@yarnpkg/libzip@3.2.2"]
+
 [tasks.check]
 description = "Validate the shared Renovate preset"
-run = '''
-docker run --rm --volume "$PWD:/work:ro" --workdir /work \
-  ghcr.io/renovatebot/renovate:44.103.0 \
-  renovate-config-validator --strict --no-global default.json
-'''
+run = "renovate-config-validator --strict --no-global default.json"

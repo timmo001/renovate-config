@@ -9,7 +9,9 @@
     "group:monorepos",
     "group:recommended"
   ],
-  "dependencyDashboard": true,
+  "dependencyDashboard": {
+    "enabled": true
+  },
   "labels": ["dependencies"],
   "git-submodules": {
     "enabled": true

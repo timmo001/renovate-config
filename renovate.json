@@ -1,16 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabled": false,
-  "extends": ["github>timmo001/renovate-config"],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/^mise\\.toml$/"],
-      "matchStrings": [
-        "ghcr\\.io/renovatebot/renovate:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
-      ],
-      "depNameTemplate": "ghcr.io/renovatebot/renovate",
-      "datasourceTemplate": "docker"
-    }
-  ]
+  "extends": ["github>timmo001/renovate-config"]
 }
