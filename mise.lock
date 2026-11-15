@@ -149,7 +149,7 @@ trust_policy_excludes = '["@yarnpkg/libzip@3.2.2"]'
 version = "1.38.0"
 backend = "pipx:yamllint"
 specifiers = ["1.38.0"]
-uv = { path = ".mise/locks/pipx-yamllint/1.38.0", digest = "sha256:6027be4d39d8236b1af726ae88550b2ca77b7957ef8261dd0106d6bd18f21fa8" }
+uv = { path = ".mise/locks/pipx-yamllint/1.38.0", digest = "sha256:21cbf11ed1c491afb58b51bcefb1d921af6816681fa4a372becf0362bcc78332" }
 
 [[tools.pkl]]
 version = "0.33.0"

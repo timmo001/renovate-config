@@ -3,6 +3,7 @@ extends: default
 
 ignore: |
   .agents/skills/
+  .mise/locks/
 
 rules:
   document-start:
