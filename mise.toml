@@ -1,5 +1,6 @@
 [tools]
 node = "24"
+"npm:prettier" = "3.10.1"
 
 [tools."npm:renovate"]
 version = "44.239.1"
@@ -7,6 +8,14 @@ version = "44.239.1"
 allow_builds = ["re2"]
 # @yarnpkg/libzip 3.2.2 was published by arcanis from yarnpkg/berry without provenance
 trust_policy_excludes = ["@yarnpkg/libzip@3.2.2"]
+
+[tasks.format]
+description = "Format the repository with Prettier"
+run = "prettier --write ."
+
+[tasks."format:check"]
+description = "Check formatting without writing"
+run = "prettier --check ."
 
 [tasks.check]
 description = "Validate the shared Renovate preset"
