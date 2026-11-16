@@ -13,17 +13,12 @@ permissions:
 
 jobs:
   preset:
-    name: Renovate config
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        # yamllint disable-line rule:line-length
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Set up mise
-        uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 # v5.2.8
-      - name: Validate preset
-        run: mise run check
+    # yamllint disable-line rule:line-length
+    uses: timmo001/workflows/.github/workflows/run-mise-task.yml@db6f3692a31de24d2bee17e505dfd2bf3fd5a076 # 20261116.1
+    with:
+      name: Renovate config
+      task: check
 
   lint:
     # yamllint disable-line rule:line-length
-    uses: timmo001/workflows/.github/workflows/lint-general.yml@5451f6867a5cb2b9b6318a82e00f7dd9f9fc279a # 20261116.0
+    uses: timmo001/workflows/.github/workflows/lint-general.yml@db6f3692a31de24d2bee17e505dfd2bf3fd5a076 # 20261116.1
