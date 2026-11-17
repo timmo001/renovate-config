@@ -282,6 +282,11 @@
       ],
       "matchUpdateTypes": ["digest"],
       "enabled": false
+    },
+    {
+      "description": "Skip the package.json files mise writes beside its lock under .mise/locks. They pin the same version as the mise tool, which moves them when it's updated.",
+      "matchFileNames": ["**/.mise/locks/**"],
+      "enabled": false
     }
   ]
 }
