@@ -6,7 +6,7 @@ pkl = "0.33.0"
 "npm:markdownlint-cli2" = "0.24.1"
 "pipx:yamllint" = "1.38.0"
 # mise needs uv 0.12.10 or later to install from the Python dependency lock
-uv = "0.13.8"
+uv = "0.13.9"
 actionlint = "1.7.12"
 shellcheck = "0.11.0"
 
