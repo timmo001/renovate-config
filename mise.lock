@@ -124,10 +124,10 @@ checksum = "sha256:e612af99f626ab415ea225af6bce5c971feb448cb5cae250bb1c3fa50c5f7
 url = "https://nodejs.org/dist/v24.22.3/node-v24.22.3-win-x64.zip"
 
 [[tools."npm:markdownlint-cli2"]]
-version = "0.24.1"
-aube = { path = ".mise/locks/npm-markdownlint-cli2/0.24.1", digest = "sha256:6737143ae7b051a66903dc3736b592c8d9c2bc14ea0e67c82cad855dd2506792" }
+version = "0.24.2"
+aube = { path = ".mise/locks/npm-markdownlint-cli2/0.24.2", digest = "sha256:db093e2bac71e1c526358d67e3105d4d68674de1f8a7ab8d2150ca4489f89451" }
 backend = "npm:markdownlint-cli2"
-specifiers = ["0.24.1"]
+specifiers = ["0.24.2"]
 
 [[tools."npm:prettier"]]
 version = "3.10.1"

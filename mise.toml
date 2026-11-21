@@ -3,7 +3,7 @@ node = "24"
 "npm:prettier" = "3.10.1"
 hk = "2.13.0"
 pkl = "0.33.1"
-"npm:markdownlint-cli2" = "0.24.1"
+"npm:markdownlint-cli2" = "0.24.2"
 "pipx:yamllint" = "1.38.0"
 # mise needs uv 0.12.10 or later to install from the Python dependency lock
 uv = "0.13.9"
