@@ -11,7 +11,7 @@ actionlint = "1.7.12"
 shellcheck = "0.11.0"
 
 [tools."npm:renovate"]
-version = "44.257.3"
+version = "44.257.5"
 # re2 downloads its native build, which Renovate uses to validate regexes
 allow_builds = ["re2"]
 # @yarnpkg/libzip 3.2.2 was published by arcanis from yarnpkg/berry without provenance
