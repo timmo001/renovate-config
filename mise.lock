@@ -137,10 +137,10 @@ backend = "npm:prettier"
 specifiers = ["3.10.1"]
 
 [[tools."npm:renovate"]]
-version = "44.260.0"
-aube = { path = ".mise/locks/npm-renovate/44.260.0~026f02c4", digest = "sha256:1eb08def8a1e7c3abcfedda8170a18835fcd56858fdbaafd1e7fa7f09a489460" }
+version = "44.261.0"
+aube = { path = ".mise/locks/npm-renovate/44.261.0~026f02c4", digest = "sha256:9518fbb7d2f5fde9aeb3ee6a61459d7b5e7265c4a4c5f995db56a5a011b32d7c" }
 backend = "npm:renovate"
-specifiers = ["44.260.0"]
+specifiers = ["44.261.0"]
 
 [tools."npm:renovate".options]
 allow_builds = '["re2"]'
